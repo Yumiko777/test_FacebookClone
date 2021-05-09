@@ -18,7 +18,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     @picture.user_id = current_user.id
-    if paramas[:back]
+    if params[:back]
       render :new
     else
       if @picture.save
