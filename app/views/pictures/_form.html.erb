@@ -1,7 +1,7 @@
 <%= form_with(model: @picture, local: true, url: choose_new_or_edit ) do |form| %>
   <% if @picture.errors.any? %>
     <div id="error_explanation">
-      <h4><%= @picture.errors.count %>件のエラーがあります。</h4>
+      <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
       <ul>
       <% @picture.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -9,12 +9,16 @@
       </ul>
    </div>
   <% end %>
-  <div class="picture_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
-  <br>
-  <%= form.submit %>
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>
-<br>
-<%= link_to "写真一覧画面にもどる", pictures_path %>
