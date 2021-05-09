@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pictures#index'
+  resources :users, only: [:new, :create, :show]
   resources :pictures do
     collection do
       post :confirm
