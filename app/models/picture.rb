@@ -1,3 +1,3 @@
 class Picture < ApplicationRecord
-  validtates :content, presence: true
+  validates :content, presence: true
 end
