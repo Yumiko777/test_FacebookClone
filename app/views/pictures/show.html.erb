@@ -2,6 +2,8 @@
 <p>内容: <%= @picture.content %></p>
 <p id="notice"><%= notice %></p>
 <p>
+  <strong>投稿者:</strong>
+  <%= @picture.user.name %>
   <strong>Content:</strong>
   <%= @picture.content %>
   <strong>Image:</strong>
