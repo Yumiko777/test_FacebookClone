@@ -10,11 +10,11 @@
    </div>
   <% end %>
 
-  <div class="field">
+  <div class="title">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
-  <div class="field">
+  <div class="title">
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div
@@ -23,3 +23,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+<br>
+<%= link_to "一覧画面に戻る", pictures_path %>
