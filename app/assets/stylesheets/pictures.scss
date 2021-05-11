@@ -1,26 +1,31 @@
+html {
+  font-size: 70%;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
 header {
+  background-color: #4D73BB;
+  height: 50px;
   width: 100%;
-  background-color: blue;
-  height: 54px;
-  font-size: 3rem;
-  margin: 0
+  font-size: 1.5rem;
 }
-footer {
+footer{
   width: 100%;
-  padding: 20px 0 10px 0;
-  color: white;
-  margin: auto;
-  padding-bottom: 10px;
-  font-size: 12px;
-  position: absolute;
+  height: 100px;
   bottom: 0;
+  background-color: #4DBB7A;
+  display: table;
 }
-a {
-  position: relative;
-  top: 400px;
-  left: auto;
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
 }
-div.danger {
-  top:200px;
-  left: auto;
+.h {
+  color: blue;
+  font-size: 20px;
 }
